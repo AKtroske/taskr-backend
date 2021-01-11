@@ -4,7 +4,7 @@ const pool = new Pool({
   user: process.env.DBUSER,
   host: process.env.DBHOST,
   database: process.env.DBDATABASE,
-  password: process.env.DBPASSWORD,
+  password: "Sharnigan38",
   port: 5432,
 })
 
@@ -15,3 +15,8 @@ pool.on('error', (err, client) => {
 })
 
 module.exports = pool
+
+
+// To access DB using CMD line
+//   - psql -U postgres (sign in as postgres user - pass .env)
+//   - \c jobbishtest
